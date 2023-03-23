@@ -15,22 +15,22 @@ use App\Http\Controllers\HomeController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('/', [UsuarioController::class, 'homeView']);
+Route::get('/', [HomeController::class, 'homeView']);
 Route::get('/login', [UsuarioController::class, 'loginView']);
-Route::get('/fazer-login', [UsuarioController::class, 'login']);
+Route::post('/fazer-login', [UsuarioController::class, 'login']);
 Route::get('/cadastro', [UsuarioController::class, 'cadastroView']);
-Route::get('/fazer-cadastro', [UsuarioController::class, 'cadastro']);
+Route::post('/fazer-cadastro', [UsuarioController::class, 'cadastro']);
 
 Route::get('/conta', [UsuarioController::class, 'contaView']);
 
 
-Route::get('/livros', [UsuarioController::class, 'livrosView']);
+Route::get('/livros', [LivroController::class, 'livrosView']);
 
 
-Route::get('/pesquisa', [UsuarioController::class, 'pesquisaView']);
-Route::get('/pesquisa-livro', [UsuarioController::class, 'pesquisaView']);
+Route::get('/pesquisa', [LivroController::class, 'pesquisaView']);
+Route::get('/pesquisa-livro', [LivroController::class, 'pesquisaView']);
 
-Route::get('/info-livro', [UsuarioController::class, 'infolivroView']);
+Route::get('/info-livro', [LivroController::class, 'infolivroView']);
 
 
 

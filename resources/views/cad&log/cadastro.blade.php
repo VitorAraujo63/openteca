@@ -7,7 +7,7 @@
     <title>Cadastro</title>
 </head>
 <body>
-    <form action="" method="get">
+    <form action="" method="post">
         <table>
             <tr>
                 <td><label for="nome">Nome</label></td>
